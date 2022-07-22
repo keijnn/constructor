@@ -18,6 +18,7 @@ export const ConstructorItems = () => {
     { id: 4, title: 'Image', img: fourth },
   ]
 
+
   const list = items.map((item) => {
     return (
       <li
@@ -34,7 +35,9 @@ export const ConstructorItems = () => {
   })
 
   return (
-    <div className="col-start-1 row-span-6 flex flex-col justify-between items-center">
+    <div
+      className="col-start-1 row-span-6 flex flex-col justify-between items-center"
+    >
       <ul className="w-full grid gap-3 grid-cols-2 p-4">{list}</ul>
     </div>
   )

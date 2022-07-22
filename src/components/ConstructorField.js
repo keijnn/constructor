@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import { useStore } from 'effector-react'
 
-import { $board, itemDeleted, itemSortedUp, itemCopied, itemSortedDown } from 'features/constructor'
+import {
+  $board,
+  itemDeleted,
+  itemSortedUp,
+  itemCopied,
+  itemSortedDown,
+  inputChanged,
+  itemActived
+} from 'features/constructor'
 
 import bot from 'assets/icons/arrow-bottom.svg'
 import top from 'assets/icons/arrow-top.svg'
@@ -28,10 +36,15 @@ export const ConstructorField = () => {
 
   const boardList = board.map((cart, index) => {
     return (
-      <div key={cart.id} className="relative">
+      <div onClick={() => itemActived(cart.id)} key={cart.id} className="relative">
         <div className={status === cart.id ? buttonsActived : buttonsDisabled}>
           <div className="flex mr-2 p-0">
-            <img onClick={() => itemSortedDown(index)} className="bg-[#449CF4] p-1" src={bot} alt="img" />
+            <img
+              onClick={() => itemSortedDown(index)}
+              className="bg-[#449CF4] p-1"
+              src={bot}
+              alt="img"
+            />
             <img
               onClick={() => itemSortedUp(index)}
               className="bg-[#449CF4] p-1"
@@ -61,7 +74,10 @@ export const ConstructorField = () => {
         >
           <img src={cart.img} alt="img" />
           <p className="mt-2">{cart.title}</p>
-          <input className={status === cart.id ? inputActived : inputDisabled} />
+          <input
+            onChange={(event) => inputChanged(event.target.value)}
+            className={status === cart.id ? inputActived : inputDisabled}
+          />
         </div>
       </div>
     )
