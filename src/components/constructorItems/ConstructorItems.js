@@ -25,13 +25,13 @@ export const ConstructorItems = () => {
   const list = items.map((item) => {
     return (
       <li
-        onClick={() => itemAdded(
-          {  
-            id: Math.random(), 
-            title: item.title, 
-            img: item.img 
-          }
-          )}
+        onClick={() =>
+          itemAdded({
+            id: Math.random(),
+            title: item.title,
+            img: item.img,
+          })
+        }
         key={item.id}
         className={style.cart}
       >

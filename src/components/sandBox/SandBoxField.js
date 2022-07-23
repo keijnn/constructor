@@ -22,16 +22,16 @@ export const SandBoxFielld = () => {
 
     if (item.title === 'Paragraph') {
       return (
-        <div key={item.id} class="w-full cursor-pointer mb-3 text-center text-[#97AACD]">
-          <div class="whitespace-normal">{item.value}</div>
+        <div key={item.id} className="w-full cursor-pointer mb-3 text-center text-[#97AACD]">
+          <div className="whitespace-normal">{item.value}</div>
         </div>
       )
     }
 
     if (item.title === 'Button') {
       return (
-        <div key={item.id} class="w-full  mb-3 flex items-center justify-center">
-          <div class="cursor-pointer flex items-center justify-center bg-[#4368E0] w-24 h-12 text-white">
+        <div key={item.id} className="w-full  mb-3 flex items-center justify-center">
+          <div className="cursor-pointer flex items-center justify-center bg-[#4368E0] w-24 h-12 text-white">
             {item.value}
           </div>
         </div>
