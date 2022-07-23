@@ -1,0 +1,52 @@
+.actived {
+  @apply w-full 
+    cursor-pointer 
+    px-4 
+    mb-3 
+    rounded-xl 
+    h-28 
+    flex 
+    flex-col 
+    items-center 
+    justify-center 
+    bg-[#D9E7FF];
+}
+
+.disabled {
+  @apply w-full 
+  cursor-pointer 
+  mb-3 
+  rounded-xl 
+  h-24 flex 
+  flex-col 
+  items-center 
+  justify-center 
+  bg-white;
+}
+
+.activedButton {
+  @apply flex 
+    absolute 
+    -top-5 
+    right-2 
+    justify-end;
+}
+
+.inputActived {
+  @apply w-full 
+  h-8 
+  outline-none 
+  p-3;
+}
+
+.field {
+    @apply pt-8 
+    max-h-full 
+    overflow-auto 
+    px-5 
+    col-start-4 
+    p-3 
+    col-end-2 
+    row-span-6 
+    bg-[#F5F5FC]
+}

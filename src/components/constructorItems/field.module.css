@@ -1,0 +1,12 @@
+.cart {
+  @apply h-24 
+  border-2 
+  bg-[#F5F5FC] 
+  rounded-xl 
+  flex 
+  flex-col 
+  justify-center 
+  items-center 
+border-gray-200
+    cursor-pointer;
+}

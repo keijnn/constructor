@@ -1,12 +1,16 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 body {
   margin: 0;
   padding: 0;
 }
 
+
+//webkit styles for scrollbar
 *::-webkit-scrollbar {
   width: 6px;
 }
